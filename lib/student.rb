@@ -42,8 +42,7 @@ class Student
     @id = DB[:conn].execute(
       "SELECT TOP 1 id FROM students,
       ORDER BY id desc
-      limit 1
-      ")
+      limit 1";)
   end
 
   def self.create(name:, grade:)
