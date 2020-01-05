@@ -40,6 +40,7 @@ class Student
       FROM students,
       ORDER BY id desc
              SQL
+      save
   end
 
   def self.create(name:, grade:)
