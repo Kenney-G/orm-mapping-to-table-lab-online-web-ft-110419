@@ -39,6 +39,7 @@ class Student
       FROM students,
       ORDER BY id desc
     );
+            SQL
     DB[:conn].execute(sql)
   end
 
