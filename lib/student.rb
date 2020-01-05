@@ -36,11 +36,11 @@ class Student
       INSERT INTO students (name, grade)
       VALUES (?, ?)
             
-      SELECT TOP 1 id,
-      FROM students,
-      ORDER BY id desc
              SQL
     DB[:conn].execute(sql, self.name, self.grade)
+    @id = DB[:conn].execute(
+      "SELECT TOP 1 id FROM students,
+      ORDER BY id desc")
   end
 
   def self.create(name:, grade:)
