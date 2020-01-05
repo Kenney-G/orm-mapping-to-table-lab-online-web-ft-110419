@@ -34,7 +34,7 @@ class Student
     sql = <<-SQL
     (
       INSERT INTO students(name, grade)
-      VALUES (?, ?),
+      VALUES (?, ?)
       SELECT TOP 1 id,
       FROM students,
       ORDER BY id desc
