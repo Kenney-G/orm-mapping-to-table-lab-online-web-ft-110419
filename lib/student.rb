@@ -41,6 +41,7 @@ class Student
     );
             SQL
     DB[:conn].execute(sql)
+    
   end
 
   def self.create(name:, grade:)
