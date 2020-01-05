@@ -41,7 +41,7 @@ class Student
       FROM students,
       ORDER BY id desc
       );
-            SQL
+             SQL
   end
 
   def self.create(name:, grade:)
