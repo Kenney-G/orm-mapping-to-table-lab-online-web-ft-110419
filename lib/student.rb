@@ -35,10 +35,13 @@ class Student
       (
       INSERT INTO students(name, grade)
       VALUES (?, ?)
+      );
+      (
       SELECT TOP 1 id,
       FROM students,
       ORDER BY id desc
       );
+            SQL
   end
 
   def self.create(name:, grade:)
