@@ -41,7 +41,7 @@ class Student
   
     @id = DB[:conn].execute(
       "SELECT TOP 1 id FROM students
-      ORDER BY id desc
+      ORDER BY id desc,
       LIMIT 1")
   end
 
