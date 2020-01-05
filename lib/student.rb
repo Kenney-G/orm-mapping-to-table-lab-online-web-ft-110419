@@ -40,7 +40,7 @@ class Student
       FROM students,
       ORDER BY id desc
              SQL
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql, self.name, self.grade)
   end
 
   def self.create(name:, grade:)
