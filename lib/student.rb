@@ -35,6 +35,10 @@ class Student
     
       INSERT INTO students (name, grade)
       VALUES (?, ?)
+            
+      SELECT TOP 1 id,
+      FROM students,
+      ORDER BY id desc
              SQL
   end
 
@@ -42,6 +46,8 @@ class Student
     student = Self.new(name,grade)
     student.save
     student
+    
+    
   end
 
 end
